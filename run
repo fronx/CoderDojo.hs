@@ -1,0 +1,4 @@
+FILENAME=$1
+NAME=${FILENAME%.*}
+
+ghc --make $FILENAME -outputdir output -o output/$NAME && ./output/$NAME
