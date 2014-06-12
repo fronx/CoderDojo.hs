@@ -61,6 +61,29 @@ mal5 = mal 5
 -- hinzuschreiben, damit Haskell überprüfen kann, ob
 -- es irgendwelche Widersprüche gibt.
 --
+-- # Eigene Typen
+--
+-- Man kann auch seine eigenen Typen definieren:
+
+data Zustand = An | Aus
+
+-- Und so kann man diesen Typ verwenden:
+
+schalten :: Zustand -> Zustand
+schalten (An)  = Aus
+schalten (Aus) = An
+
+-- Hier ist noch ein Beispiel. Diesmal ist es ein
+-- Typ, dem man Werte mitgeben kann:
+
+data Paar = Paar Int Int
+
+xy = Paar 1 2
+
+-- Eigene Typen sind eine ziemlich tolle Sache.
+-- Wir werden irgendwann später nochmal auf sie
+-- zurückkommen.
+--
 -- # Hauptprogramm
 --
 -- Definitionen schreiben nichts auf den Bildschirm. Um
