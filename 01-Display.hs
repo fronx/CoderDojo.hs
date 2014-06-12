@@ -75,7 +75,8 @@ kreis4 = translate 40 30 (color red kreis2)
 main = display bildschirm hintergrund
   (pictures
     [ kreis1
-    , kreis3
+    , kreis2
+    , kreis4
     ]
   )
 
