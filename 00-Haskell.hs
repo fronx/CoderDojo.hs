@@ -1,0 +1,74 @@
+-- # 00 Haskell
+--
+-- Haskell ist eine Programmiersprache, benannt nach dem
+-- Mathematiker Haskell Curry. Haskell wird von vielen
+-- Firmen verwendet, unter anderen Facebook.
+--
+-- ## Definitionen, Variablen
+--
+-- Ein Haskell-Programm ist eine Liste von Definitionen,
+-- die miteinander zusammenhängen. Hier sind ein paar
+-- Beispiele für Definitionen:
+
+zahl = 2
+zahlMal3 = zahl * 3
+
+-- `zahl` und `zahlMal3` nennt man Variablen. Eine Variable
+-- kann nur einmal definiert werden und ändert sich danach
+-- nicht.
+
+-- ## Funktionen
+--
+-- Hier ist ein Beispiel für eine Funktion:
+
+mal a b = a * b
+
+-- Und so sieht es aus, wenn man die Funktion verwendet:
+
+a = mal 3 2
+
+-- `a` hat jetzt den Wert 6.
+--
+-- `a` und `b` nennt man einen Parameter. Den Namen
+-- von Parametern kann man beliebig auswählen.
+--
+-- `a` ist eine Funktion, die zwei Zahlen annimmt und
+-- eine Zahl zurückgibt. In Haskell man man diesen selben
+-- Satz so ausdrücken:
+
+mal :: Int -> Int -> Int
+
+-- So eine Zeile nennt man Typensignatur. `Int` ist ein Typ,
+-- der nur Werte erlaubt, die Zahlen sind. Also Wörter gehen
+-- zum Beispiel nicht.
+--
+-- `Int -> Int` ist auch ein Typ. Es ist der Typ von
+-- Funktionen, die eine Zahl annehmen und eine Zahl
+-- zurückgeben.
+--
+-- # Currying
+--
+-- Man muss die Parameter für eine Funktion nicht unbedingt
+-- alle auf einmal übergeben. Die folgende Funktion belegt
+-- zum Beispiel nur den ersten Parameter von `mal` und lässt
+-- den zweiten offen:
+
+mal5 :: Int -> Int
+mal5 = mal 5
+
+-- Typen muss man nicht unbedingt ausschreiben, aber wenn
+-- man den Typ kennt, ist es oft gut ihn einfach
+-- hinzuschreiben, damit Haskell überprüfen kann, ob
+-- es irgendwelche Widersprüche gibt.
+--
+-- # Hauptprogramm
+--
+-- Definitionen schreiben nichts auf den Bildschirm. Um
+-- etwas sehen zu können, braucht man ein Hauptprogramm
+-- und Ausgabebefehle.
+
+main = do
+  print zahl
+  putStrLn ("zahl: " ++ (show zahl))
+  print (mal5 3)
+  print (mal 6 2)
