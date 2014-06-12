@@ -1,8 +1,8 @@
 -- # 00 Haskell
 --
 -- Haskell ist eine Programmiersprache, benannt nach dem
--- Mathematiker Haskell Curry. Haskell wird von vielen
--- Firmen verwendet, unter anderen Facebook.
+-- Mathematiker Haskell Curry. Die Sprache wird von vielen
+-- Firmen verwendet, unter anderem Facebook.
 --
 -- ## Definitionen, Variablen
 --
@@ -25,15 +25,15 @@ mal a b = a * b
 
 -- Und so sieht es aus, wenn man die Funktion verwendet:
 
-a = mal 3 2
+c = mal 3 2
 
--- `a` hat jetzt den Wert 6.
+-- `c` hat jetzt den Wert 6.
 --
--- `a` und `b` nennt man einen Parameter. Den Namen
+-- `a` und `b` nennt man Parameter. Den Namen
 -- von Parametern kann man beliebig auswählen.
 --
--- `a` ist eine Funktion, die zwei Zahlen annimmt und
--- eine Zahl zurückgibt. In Haskell man man diesen selben
+-- `mal` ist eine Funktion, die zwei Zahlen annimmt und
+-- eine Zahl zurückgibt. In Haskell kann man diesen selben
 -- Satz so ausdrücken:
 
 mal :: Int -> Int -> Int
