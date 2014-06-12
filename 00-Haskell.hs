@@ -92,6 +92,8 @@ xy = Paar 1 2
 
 main = do
   print zahl
-  putStrLn ("zahl: " ++ (show zahl))
   print (mal5 3)
   print (mal 6 2)
+  putStrLn (show 123)
+  putStrLn ("hallo" ++ " du da")
+  putStrLn ("zahl: " ++ (show zahl))
