@@ -1,4 +1,7 @@
+#!/bin/bash
+
 FILENAME=$1
 NAME=${FILENAME%.*}
 
-ghc --make $FILENAME -outputdir output -o output/$NAME && ./output/$NAME
+mkdir -p ./output
+ghc -pgmL ./unlit --make $FILENAME -outputdir output -o output/$NAME && ./output/$NAME

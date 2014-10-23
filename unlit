@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# GHC calls this like so:
+#   unlit [args] -h label Foo.lhs /tmp/somefile
+# args are arguments passed via -optL
+# We pretend that no additional arguments have been passed.
+
+shift; shift
+SOURCE=$1; shift
+TARGET=$1; shift
+
+sed -s '/^[^>]/ { s/^/-- / }; /^>/ { s/^> *// }' ${SOURCE} > ${TARGET}
